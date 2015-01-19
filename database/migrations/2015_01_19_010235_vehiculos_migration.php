@@ -16,7 +16,7 @@ class VehiculosMigration extends Migration {
 		{
 			$table->increments('serie');
 			$table->string('color');
-			$table->float('clinidraje');
+			$table->float('cilindraje');
 			$table->integer('potencia');
 			$table->float('peso');
 			$table->integer('fabricante_id')->unsigned();
