@@ -17,7 +17,14 @@ class FabricanteVehiculoController extends Controller {
 	 */
 	public function index($id)
 	{
-		return 'Mostrando los vehiculos del fabricante con id '.$id;
+		$fabricante = Fabricante::find($id);
+
+		if(!$fabricante)
+		{
+			return response()->json(['mensaje' => 'No se encuentra este fabricante', 'codigo' => 404],404);
+		}
+
+		return response()->json(['datos' => $fabricante->vehiculos],200);
 	}
 
 	/**
