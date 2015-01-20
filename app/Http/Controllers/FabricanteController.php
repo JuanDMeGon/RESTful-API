@@ -16,7 +16,7 @@ class FabricanteController extends Controller {
 	 */
 	public function index()
 	{
-		return 'mostrando todod los fabricantes';
+		return response()->json(['datos' => Fabricante::all()],200);
 	}
 
 	/**
@@ -47,7 +47,14 @@ class FabricanteController extends Controller {
 	 */
 	public function show($id)
 	{
-		return 'mostrando el fabricante con id ' . $id;
+		$fabricante = Fabricante::find($id);
+
+		if(!$fabricante)
+		{
+			return response()->json(['mensaje' => 'No se encuentra este fabricante', 'codigo' => 404],404);
+		}
+
+		return response()->json(['datos' => $fabricante],200);
 	}
 
 	/**

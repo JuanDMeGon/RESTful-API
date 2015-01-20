@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Fabricante;
 use App\Vehiculo;
 
-class VehiculoController extends Controller {
+class FabricanteVehiculoController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
