@@ -11,7 +11,7 @@ class FabricanteController extends Controller {
 
 	public function __construct()
 	{
-		$this->middleware('auth.basic', ['only' => ['store', 'update', 'destroy']]);
+		$this->middleware('auth.basic.once', ['only' => ['store', 'update', 'destroy']]);
 	}
 
 	/**
@@ -143,6 +143,4 @@ class FabricanteController extends Controller {
 
 		return response()->json(['mensaje' => 'Fabricante eliminado'],200);
 	}
-
-
 }
