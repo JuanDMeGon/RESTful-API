@@ -1,7 +1,7 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "JuanDMeGon/RESTful-API",
+	"description": "Este es un proyecto de coódigo abierto para probar una API RESTful de vehiculos implementada con Laravel 5.",
+	"keywords": ["framework", "laravel", "API", "RESTful"],
 	"license": "MIT",
 	"type": "project",
 	"require": {
@@ -35,11 +35,11 @@
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
+			"php -r \"copy('.env.example', '.env');\"",
 			"php artisan key:generate"
 		]
 	},
 	"config": {
 		"preferred-install": "dist"
-	},
-	"minimum-stability": "dev"
+	}
 }

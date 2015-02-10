@@ -1,2 +1,5 @@
 /vendor
 .env
+*.sublime-project
+*.sublime-workspace
+composer.lock
