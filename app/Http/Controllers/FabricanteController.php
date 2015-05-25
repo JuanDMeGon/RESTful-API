@@ -24,9 +24,11 @@ class FabricanteController extends Controller {
 	{
 		$fabricantes = Cache::remember('fabricantes', 15/60, function()
 			{
-				return Fabricante::all();
+				return Fabricante::simplePaginate(15);
 			});
-		return response()->json(['datos' => $fabricantes],200);
+
+
+		return response()->json(['siguiente' => $fabricantes->nextPageUrl(), 'anterior' => $fabricantes->previousPageUrl(), 'datos' => $fabricantes->items()],200);
 	}
 
 	/**

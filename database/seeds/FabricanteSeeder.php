@@ -15,7 +15,7 @@ class FabricanteSeeder extends Seeder
 	public function run()
 	{
 		$faker = Faker::create();
-		for($i = 0; $i < 3; $i++)
+		for($i = 0; $i < 100; $i++)
 		{
 			Fabricante::create
 			([

@@ -19,7 +19,7 @@ class VehiculoSeeder extends Seeder
 
 		$cantidad = Fabricante::all()->count();
 
-		for($i = 0; $i < 50; $i++)
+		for($i = 0; $i < 500; $i++)
 		{
 			Vehiculo::create
 			([
