@@ -17,7 +17,7 @@ class FabricantesMigration extends Migration {
 			$table->increments('id');
 			$table->string('nombre');
 			$table->integer('telefono');
-			$table->timestamps();
+			$table->nullableTimestamps();
 		});
 	}
 
