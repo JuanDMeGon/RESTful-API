@@ -101,12 +101,12 @@ class FabricanteController extends Controller {
 
 			if($bandera)
 			{
-				$vehiculo->save();
+				$fabricante->save();
 
-				return response()->json(['mensaje' => 'Vehiculo editado'],200);
+				return response()->json(['mensaje' => 'Fabricante editado'],200);
 			}
 
-			return response()->json(['mensaje' => 'No se modificó ningun vehiculo'],200);
+			return response()->json(['mensaje' => 'No se modificó ningun fabricante'],200);
 		}
 
 		$nombre = $request->input('nombre');
