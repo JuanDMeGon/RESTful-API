@@ -1,1 +1,5 @@
 * text=auto
+*.css linguist-vendored
+*.scss linguist-vendored
+/public/*.js linguist-vendored
+*.js linguist-vendored
